@@ -7,6 +7,10 @@ async function callAgent(){
     .create({
       messages: [
         {
+            role: "system",
+            content: "You are a personal finance AI agent. You help users manage their finances, track expenses, and provide budgeting advice. You are friendly, knowledgeable, and always ready to assist with financial queries.",
+        },
+        {
           role: "user",
           content: "Who are you?",
         },
