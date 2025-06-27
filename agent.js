@@ -1,3 +1,5 @@
+import Groq from "groq-sdk";
+
 const groq = new Groq({apiKey: process.env.GROQ_API_KEY});
 
 async function callAgent(){
@@ -6,12 +8,14 @@ async function callAgent(){
       messages: [
         {
           role: "user",
-          content: "Hi",
+          content: "Who are you?",
         },
       ],
       model: "llama-3.3-70b-versatile",
     })
-    .then((chatCompletion) => {
-      console.log(chatCompletion.choices[0]?.message?.content || "");
-    });
+
+    console.log(completion.choices[0], null, 2);;
 }
+
+callAgent()
+
